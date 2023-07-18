@@ -89,7 +89,7 @@ const Chat = () => {
         } catch ( e )  {
             if (!abortController.signal.aborted) {
                 console.error(result);
-                let errorMessage = "An error occurred. Please try again. If the problem persists, please contact the site administrator.";
+                let errorMessage = "出现错误。请再试一次。如果问题仍然存在，请与网站管理员联系。";
                 if (result.error?.message) {
                     errorMessage = result.error.message;
                 }
@@ -169,12 +169,12 @@ const Chat = () => {
                         {!lastQuestionRef.current ? (
                             <Stack className={styles.chatEmptyState}>
                                 <img
-                                    src={Azure}
+                                    src="https://file.magaoedu.com/21c046eaa00da875ee5e4742c755761c.jpg"
                                     className={styles.chatIcon}
                                     aria-hidden="true"
                                 />
-                                <h1 className={styles.chatEmptyStateTitle}>Start chatting</h1>
-                                <h2 className={styles.chatEmptyStateSubtitle}>This chatbot is configured to answer your questions</h2>
+                                <h1 className={styles.chatEmptyStateTitle}>开始聊天</h1>
+                                <h2 className={styles.chatEmptyStateSubtitle}>此聊天机器人已配置为回答您的问题</h2>
                             </Stack>
                         ) : (
                             <div className={styles.chatMessageStream} style={{ marginBottom: isLoading ? "40px" : "0px"}} role="log">
@@ -196,7 +196,7 @@ const Chat = () => {
                                             </div> : answer.role === "error" ? <div className={styles.chatMessageError}>
                                                 <Stack horizontal className={styles.chatMessageErrorContent}>
                                                     <ErrorCircleRegular className={styles.errorIcon} style={{color: "rgba(182, 52, 67, 1)"}} />
-                                                    <span>Error</span>
+                                                    <span>错误</span>
                                                 </Stack>
                                                 <span className={styles.chatMessageErrorContent}>{answer.content}</span>
                                             </div> : null
@@ -254,7 +254,7 @@ const Chat = () => {
                             </div>
                             <QuestionInput
                                 clearOnSend
-                                placeholder="Type a new question..."
+                                placeholder="输入问题..."
                                 disabled={isLoading}
                                 onSend={question => makeApiRequest(question)}
                             />
