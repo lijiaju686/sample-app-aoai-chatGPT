@@ -29,10 +29,11 @@ def create_search_index(index_name, index_client):
             fields=[
                 SearchableField(name="id", type="Edm.String", key=True),
                 SearchableField(
-                    name="content", type="Edm.String", analyzer_name="en.lucene"
+                    # en.lucene
+                    name="content", type="Edm.String", analyzer_name="zh-Hans.lucene"
                 ),
                 SearchableField(
-                    name="title", type="Edm.String", analyzer_name="en.lucene"
+                    name="title", type="Edm.String", analyzer_name="zh-Hans.lucene"
                 ),
                 SearchableField(name="filepath", type="Edm.String"),
                 SearchableField(name="url", type="Edm.String"),
