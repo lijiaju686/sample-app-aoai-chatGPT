@@ -107,6 +107,7 @@ const Chat = () => {
     }
 
     const makeApiRequest = async (question: string) => {
+        console.log(question);
         lastQuestionRef.current = question;
         setIsLoading(true);
         setShowLoadingMessage(true);
@@ -175,6 +176,7 @@ const Chat = () => {
 
         return abortController.abort();
     };
+    (window as any).sendData = makeApiRequest;
     const clearChat = () => {
         lastQuestionRef.current = "";
         setActiveCitation(undefined);
