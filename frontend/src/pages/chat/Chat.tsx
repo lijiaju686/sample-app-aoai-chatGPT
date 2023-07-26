@@ -191,6 +191,10 @@ const Chat = () => {
 
     useEffect(() => {
         getUserInfoList();
+        let keywords = sessionStorage.keywords;
+        if(keywords){
+            makeApiRequest(keywords);
+        }
     }, []);
 
     useEffect(() => chatMessageStreamEnd.current?.scrollIntoView({ behavior: "smooth" }), [showLoadingMessage]);
