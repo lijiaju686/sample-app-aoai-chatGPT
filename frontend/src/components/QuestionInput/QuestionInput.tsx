@@ -9,6 +9,7 @@ interface Props {
     disabled: boolean;
     placeholder?: string;
     clearOnSend?: boolean;
+    id:any;
 }
 
 export const QuestionInput = ({ onSend, disabled, placeholder, clearOnSend }: Props) => {

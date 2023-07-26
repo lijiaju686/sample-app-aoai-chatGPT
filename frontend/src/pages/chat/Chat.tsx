@@ -323,7 +323,7 @@ const Chat = () => {
                                 clearOnSend
                                 placeholder="输入问题..."
                                 disabled={isLoading}
-                                id='iframe-box'
+                                id="iframe-box"
                                 onSend={question => makeApiRequest(question)}
                             />
                         </Stack>
