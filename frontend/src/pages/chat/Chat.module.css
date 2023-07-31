@@ -101,7 +101,7 @@
     flex-grow: 0;
     white-space: pre-wrap;
     word-wrap: break-word;
-    max-width: 800px;
+    max-width: 550px;
 }
 
 .chatMessageGpt {
